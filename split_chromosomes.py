@@ -10,6 +10,7 @@ Example:
 
 import argparse
 import re
+import os
 
 parser=argparse.ArgumentParser()
 
@@ -19,6 +20,10 @@ parser.add_argument('-p', type=str, help='prefix for each output file. The outpu
 parser.add_argument('-o', type=str, help='Full path name of the output directory for the output fasta files')
 
 args=parser.parse_args()
+
+if not os.path.exists(args.o):
+	os.makedirs(args.o)
+
 
 fh=open(args.i, 'r')
 
