@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Split a fasta file by chromosome/contig. This script will split a fasta file by the description lines that begin with >.
